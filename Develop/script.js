@@ -53,39 +53,49 @@ function fullCriteria() {
       console.log("Include special character: " + userCriteria.charSpecial);
     }
   }
-
   //If minimum and maximum numbers are not respected, alert an error for user to try again and clears console
   else {
   alert("Invalid input. \nPlease select a number between 8 and 128.");
   console.clear();
   }
-  
+  // Return the function's results
+  return userCriteria;
 }
 
 function generatePassword() {
   // Call on the prompt questions and stores results
-  fullCriteria();
+  var returnedFullCriteria = fullCriteria();
+  // Empty Variable to store elements according to criterias selected
   var charResult;
 
-  if (userCriteria.charLower) {
+  // If criteria charLower is true then add string to the charResult variable
+  if (returnedFullCriteria.charLower === true) {
     charResult += "abcdefghijklmnopqrstuvwxyz";
   }
-  if (userChoices.charUpper) {
+  // If criteria charUpper is true then add string to the charResult variable
+  if (returnedFullCriteria.charUpper === true) {
     charResult += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
-  if (userChoices.charNumeric) {
+  // If criteria charnumeric is true then add string to the charResult variable
+  if (returnedFullCriteria.charNumeric === true) {
     charResult += "0123456789";
   }
-  if (userChoices.charSpecial) {
+  // If criteria charSpecial is true then add string to the charResult variable
+  if (returnedFullCriteria.charSpecial === true) {
     charResult += "!@#$%^&*()_+~`|}{[]:;?,><.-=";
   }
     
+  // Empty array for finalPassword to be generated
   var finalPassword = [];
 
-    while (finalPassword.length < userChoices.charLength) {
-      finalPassword.push(charResult.charAt(Math.floor(Math.random() * charResult.length)),);
+  // Reapeat itself while the finalPassword is smaller than the length selected by user
+    while (finalPassword.length < returnedFullCriteria.charLength) {
+
+      // Adds to the finalPassword a random selection from charResult
+      finalPassword.push(charResult.charAt(Math.floor(Math.random() * charResult.length)));
     }
-    return finalPassword.join();
+    // .Join will make the finalPassword array into a unseparated string
+    return finalPassword.join("");
   }
 
 // Add event listener to generate button
