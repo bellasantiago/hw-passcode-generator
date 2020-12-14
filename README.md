@@ -23,6 +23,7 @@ https://bellasantiago.github.io/hw-passcode-generator/
 https://github.com/bellasantiago/hw-passcode-generator
 
 ## Finished Screenshots
-<img src="./img/screenshot1"/>
-![Finished code screenshot](https://drive.google.com/file/d/11hzCHsEGIw_ayjmudyqi0VKNdaDUPrDX/view?usp=sharing)
-![Finished code screenshot](https://drive.google.com/file/d/1h8uUEWqjRRJh40zByHyeTa95_m8pc-u2/view?usp=sharing)
+![Screenshot1](img/screenshot1.png)
+![Screenshot2](img/screenshot2.png)
+![Screenshot3](img/screenshot3.png)
+![Screenshot4](img/screenshot4.png)
